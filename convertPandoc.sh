@@ -1,0 +1,1 @@
+pandoc -s $1 -t markdown -o $2

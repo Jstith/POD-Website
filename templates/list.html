@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5 mb5">
+  <h1 class="mb-5">Corps of Cadets' Plan of the Day</h1>
+
+  <div class="row">
+    <div class="col-md-3">
+        <form class="mb-3" method="POST" action="#">
+          <div class="input-group">
+            <input type="text" name="text" class="form-control" placeholder="ex. 01 March 2020">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active"> This Week </a>
+          <a href="#" class="list-group-item list-group-item-action">Older</a>
+        </div>
+    </div>
+    <div class="col-md-9">
+      <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <form>
+<th scope="row">{{data[6]}}</th>
+      <td>
+        <a href="/{{data[6]}}">
+        Link to POD </a>
+      </td>
+      </form>
+      
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[5]}}</th>
+      <td>
+        <a href="/{{data[5]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[4]}}</th>
+      <td>
+        <a href="/{{data[4]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[3]}}</th>
+      <td>
+        <a href="/{{data[3]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[2]}}</th>
+      <td>
+        <a href="/{{data[2]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[1]}}</th>
+      <td>
+        <a href="/{{data[1]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+  
+    <tr>
+      <th scope="row">{{data[0]}}</th>
+      <td>
+        <a href="/{{data[0]}}">
+        Link to POD
+        </a>
+      </td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

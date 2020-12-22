@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+      <p>{{msg}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</div>
+
+<div class="container py-5 mb5">
+
+  <h1 class="mb-5">Report an issue</h1>
+
+  <div class="row py-4">
+<div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Information</h4>
+      <form class="needs-validation" novalidate method="POST">
+        <div class="row">
+          <div class="col-md-6 mb-3 col-xl-2">
+            <label for="rank">Rank</label>
+            <input type="text" class="form-control" id="rank" name="rank" placeholder="3/c" value="" required>
+            <div class="invalid-feedback">
+              Valid rank is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="name">First and Last Name&nbsp;</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" value="" required>
+            <div class="invalid-feedback">
+              Valid name is required.
+            </div>
+          </div>
+        </div>
+<div class="mb-3">
+          <label for="email">Email <span class="text-muted">&nbsp;</span></label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="first.m.last@uscga.edu">
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+<div class="row">
+<div class="col-md-6 mb-3 col-xl-12">
+            <label for="feedback">Message</label>
+            <input type="text" class="form-control" id="feedback" name="feedback" height="48" placeholder="ex. typo on line 32 of 04 June POD..." required>
+            <div class="invalid-feedback">
+              Message is required.
+            </div>
+          </div>
+        </div>
+<hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

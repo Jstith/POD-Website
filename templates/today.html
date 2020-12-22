@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron bg-dark text-white mb-0">
+  <div class="container">
+    <h1 class="display-3 text-light">Plan of the Day</h1>
+    <div class="lead mb-3">for the Corps of Cadets of the United States Coast Guard Academy</div>
+</div>
+</div>
+
+<div class="container py-5">
+{% filter markdown %}
+
+{{data}}
+
+{% endfilter %}
+</div>
+
+	</div>
+	
+</div>
+
+<script>
+	includeHTML();
+	</script> 
+{% endblock %}
