@@ -15,7 +15,7 @@ The idea is simple: Forget scrolling through 100 emails a day to find the pod fr
 How are the PODs displayed?
 
 - PODs are rendered in Markdown, a rich text language that matches the bold and underlined text from the word document.
-- Markdown and the webpage's css scripts are responsively designed, making viewing on compuaters, phones, and tablets clean and professional.
+- Markdown and the webpage's css scripts are responsively designed, making viewing on computers, phones, and tablets clean and professional.
 
 ## How does it work?
 
@@ -29,7 +29,7 @@ No! The linux server has a firewall configured to only allow traffic from the .e
 
 ## Is uptime an issue?
 
-The linux server is hosted on `linode`, a top rated hosting platform. As such, the website's uptime should be almost constant, and interruptions to the .edu network will not comprimise the website itself, although the removal of access points to the whitelisted ips would restrict access. This is a necessary tradeoff to protect the PII on the website. 
+The linux server is hosted on `DigitalOcean`, a top rated hosting platform. As such, the website's uptime should be almost constant, and interruptions to the .edu network will not compromise the website itself, although the removal of access points to the whitelisted ips would restrict access. This is a necessary tradeoff to protect the PII on the website, but this can change pending the digital collaboration security memo that's currently in routing.
 
 # Development Stuff
 
@@ -46,14 +46,13 @@ The linux server is hosted on `linode`, a top rated hosting platform. As such, t
 - Pandoc
 - Shell --> is that even a dependency? Whatever it doesn't run on windows right now
 
-I think that's everything. If you want to get a better list then run it in a blank venv and install until it runs then `pip freeze`. In the future, may implement _google drive_ api to grab the docx files straight from our google drive folder.
-
+I think that's everything. If you want to get a better list then run it in a blank venv and install until it runs then `pip freeze`. In the future, may implement _google drive_ api to grab the docx files straight from our google drive folder. That's what's in the `requirements.txt`, although idk why some of those are there, but it should work regardless.
 ## Use
 
-I can happily say that right now the basic functions all seem to be working. Runs straight off flask with the correct dependencies installed, currently on a linode server with `nginx` and `gunicorn`.
+I can happily say that right now the basic functions all seem to be working. Runs straight off flask with the correct dependencies installed, currently on a DigitalOcean server with `nginx` and `gunicorn`.
 
 ## Future goals
 
-- Automate adding new documents - first part of the flowchart --> some non-website realted reasons I haven't done this.
-- Send feedback over ezgmail or something to get it to an email --> Don't want to get spammed though, form only has basic inpout validation that can be bypassed by somebody who knows what they're doing
+- Automate adding new documents - first part of the flowchart --> some non-website related reasons I haven't done this.
+- Send feedback over ezgmail or something to get it to an email --> Don't want to get spammed though, form only has basic input validation that can be bypassed by somebody who knows what they're doing
 - Remove old md documents and maybe docx after a month to reduce size on server, but not a huge issue because the size of those files is tiny. The site was created with this goal in mind. Can also be done manually, see the first bullet.
