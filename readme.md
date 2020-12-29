@@ -25,11 +25,11 @@ The POD website was created using python's Flask library, and is hosted on a lin
 
 ## Can anyone see this website?
 
-No! The linux server has a firewall configured to only allow traffic from the .edu subdomain. This means that vpn access for remote work will still allow people to access the website, anyone not on the .edu network (protected with a certificate) will be unable to access the website.
+It depends. The linux server has a firewall that can be configured to only allow traffic from the .edu subdomain. This means that vpn access for remote work will still allow people to access the website, anyone not on the .edu network (protected with a certificate) will be unable to access the website. However, pending the approval of the ditial collaboration security memo, there will be no need to keep the website private, and it can be totally forward facing, which is beneficial for accessability, particularly from phones.
 
 ## Is uptime an issue?
 
-The linux server is hosted on `DigitalOcean`, a top rated hosting platform. As such, the website's uptime should be almost constant, and interruptions to the .edu network will not compromise the website itself, although the removal of access points to the whitelisted ips would restrict access. This is a necessary tradeoff to protect the PII on the website, but this can change pending the digital collaboration security memo that's currently in routing.
+The linux server is hosted on `DigitalOcean`, a top rated hosting platform. As such, the website's uptime should be almost constant, and interruptions to the .edu network will not compromise the website itself, although the removal of access points to the whitelisted ips would restrict access. This is a necessary tradeoff to protect the PII on the website, but this can change pending the digital collaboration security memo mentioned above.
 
 # Development Stuff
 
