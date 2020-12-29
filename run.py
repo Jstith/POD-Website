@@ -45,7 +45,7 @@ def sendFeedback(request):
 
     ## When we update the thisWeek.txt, it has to be done after the new docx file is added to the docx directory
     ## Update, thisWeek.txt updates itself. A basic error message will be flashed if the POD is not added for the day requested in /today
-    
+
     ## For updating a preexisting POD, we need to first delete the markdown file with it, then update the .docx file w/ the same name. That should be it.
 
 
@@ -95,8 +95,8 @@ def listPage():
         fileName = fileName.replace(" ", "")
         fileName = fileName.replace(",", "")
         if( os.path.isfile("data/markdown/" + fileName + ".md")):
-        	filePath = "data/markdown/" + fileName + ".md"
-	elif( os.path.isfile("data/docx/" + fileName + ".docx")):
+            filePath = "data/markdown/" + fileName + ".md"
+        elif( os.path.isfile("data/docx/" + fileName + ".docx")):
             filePath = createMarkdown(fileName)
             f = open(filePath)
             data = f.read()
@@ -106,7 +106,7 @@ def listPage():
         else:
             return redirect(url_for("listPage"))
     else:
-        
+
         data = [None] * 7
         current = date.today()
         for x in range(7):
@@ -149,4 +149,3 @@ def search(fileName):
 # Starts Flask object to run
 if __name__ == "__main__":
     app.run(debug = False)
-
