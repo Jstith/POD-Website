@@ -98,6 +98,9 @@ def listPage():
             filePath = "data/markdown/" + fileName + ".md"
         elif( os.path.isfile("data/docx/" + fileName + ".docx")):
             filePath = createMarkdown(fileName)
+        else:
+            filePath = ""
+        if 'data' in filePath:
             f = open(filePath)
             data = f.read()
             f.close()
