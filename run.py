@@ -94,7 +94,9 @@ def listPage():
         fileName = request.form["text"]
         fileName = fileName.replace(" ", "")
         fileName = fileName.replace(",", "")
-        if( os.path.isfile("data/docx/" + fileName + ".docx")):
+        if( os.path.isfile("data/markdown/" + fileName + ".md")):
+        	filePath = "data/markdown/" + fileName + ".md"
+	elif( os.path.isfile("data/docx/" + fileName + ".docx")):
             filePath = createMarkdown(fileName)
             f = open(filePath)
             data = f.read()
