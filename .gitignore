@@ -1,0 +1,5 @@
+data/docx/*
+data/markdown/*
+data/feedback.txt
+venv/
+__pycache__/
